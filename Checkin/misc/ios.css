@@ -1,0 +1,76 @@
+﻿/**********************************************************************
+* Description:  CSS to encapsulate iOS specific formatting issues.
+* Created By:   Jason Offutt @ Central Christian Church of the East Valley
+* Date Created: 11/8/2010
+*
+* $Workfile: ios.css $
+* $Revision: 3 $
+* $Header: /trunk/Arena/UserControls/Custom/Cccev/Checkin/misc/ios.css   3   2010-11-10 13:49:28-07:00   JasonO $
+*
+* $Log: /trunk/Arena/UserControls/Custom/Cccev/Checkin/misc/ios.css $
+*  
+*  Revision: 3   Date: 2010-11-10 20:49:28Z   User: JasonO 
+*  A few small changes for final testing on iOS and Mac. 
+*  
+*  Revision: 2   Date: 2010-11-09 18:52:24Z   User: JasonO 
+**********************************************************************/
+
+.footer input[type=button],
+.footer input[type=submit]
+{
+    padding-top: 5px;
+    text-indent: -21px;
+}
+
+.container .footer .nextButton,
+.container .footer .nextButtonInactive
+{
+    text-indent: -40px;
+}
+
+.container input[type=submit].searchButton
+{
+    text-indent: -10px;
+    padding-top: 13px;
+}
+
+.container input[type=button].phoneButton
+{
+    display: block;
+	padding: 0px;
+	margin: 0px;
+	text-indent: -8px;
+}
+
+#keypad tr:last-child td:last-child > input
+{
+    text-indent: -22px;
+}
+
+.container .resultScrollArea
+{
+    height: 300px;
+    overflow: auto;
+}
+
+.star
+{
+    margin-bottom: 0px;
+}
+
+input.phoneText
+{
+    padding-top: 0px;
+}
+
+.ajaxLargeProgress
+{
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
