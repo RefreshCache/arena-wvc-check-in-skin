@@ -252,8 +252,8 @@ namespace ArenaWeb.UserControls.Custom.Cccev.Checkin
         private List<Occurrence> occurrences;
         private int timeout;
 
-        protected const string EMPTY_CHECK_BOX_IMG_URL = "images/empty_checkbox.png";
-        protected const string CHECK_BOX_IMG_URL = "images/checkbox.png";
+        protected const string EMPTY_CHECK_BOX_IMG_URL = "UserControls/Custom/WVC/CccevCheckIn/images/empty-checkbox.gif";
+        protected const string CHECK_BOX_IMG_URL = "UserControls/Custom/WVC/CccevCheckIn/images/checked-checkbox.png";
 
         #endregion
 
@@ -272,9 +272,9 @@ namespace ArenaWeb.UserControls.Custom.Cccev.Checkin
 #endif
 
             smpScripts.Scripts.Add(new ScriptReference(string.Format("~/{0}", BasePage.JQUERY_INCLUDE)));
-            smpScripts.Scripts.Add(new ScriptReference("~/UserControls/Custom/Cccev/CheckIn/misc/jquery.jscrollpane.js"));
-            smpScripts.Scripts.Add(new ScriptReference("~/UserControls/Custom/Cccev/CheckIn/misc/checkin-core.js"));
-            Page.Header.Controls.Add(new LiteralControl("<link type=\"text/css\" rel=\"stylesheet\" href=\"UserControls/Custom/Cccev/CheckIn/misc/jquery.jscrollpane.css\" />"));
+            smpScripts.Scripts.Add(new ScriptReference("~/UserControls/Custom/WVC/CccevCheckIn/misc/jquery.jscrollpane.js"));
+            smpScripts.Scripts.Add(new ScriptReference("~/UserControls/Custom/WVC/CccevCheckIn/misc/checkin-core.js"));
+            Page.Header.Controls.Add(new LiteralControl("<link type=\"text/css\" rel=\"stylesheet\" href=\"UserControls/Custom/WVC/CccevCheckIn/misc/jquery.jscrollpane.css\" />"));
             Page.Header.Controls.Add(new LiteralControl(string.Format("<link type=\"text/css\" rel=\"stylesheet\" href=\"{0}\" />", CssPathSetting)));
         }
 

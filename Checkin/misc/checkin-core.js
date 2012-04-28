@@ -173,8 +173,8 @@ function setupViewInfo(stateName, intervalLength, shouldShowLoadingImage)
 
 function bindSelectFamilyMemberEvents()
 {
-    var imgEmpty = 'UserControls/Custom/Cccev/Checkin/images/empty_checkbox.png';
-    var imgChecked = 'UserControls/Custom/Cccev/Checkin/images/checkbox.png';
+    var imgEmpty = 'UserControls/Custom/WVC/CccevCheckin/images/empty-checkbox.gif';
+    var imgChecked = 'UserControls/Custom/WVC/CccevCheckin/images/checked-checkbox.png';
     var selectedCount = 0;
     var nextButton = $("input[id$='btnSelectFamilyMemberContinue']");
 
@@ -211,7 +211,7 @@ function bindSelectFamilyMemberEvents()
 
     $("table[id$='dgFamilyMembers'] input:image").click(function (event)
     {
-        if ($(this).attr('src').indexOf('empty_checkbox', 0) > 0)
+        if ($(this).attr('src').indexOf('empty-checkbox', 0) > 0)
         {
             addAttendee($(this).parent().siblings(":last").children("input:last").val());
             $(this).attr('src', imgChecked);

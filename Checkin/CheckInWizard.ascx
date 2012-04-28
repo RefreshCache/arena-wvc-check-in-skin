@@ -100,9 +100,20 @@
                 <asp:Panel ID="pnlPhoneSearch" runat="server" CssClass="container">
                     <div class="phonePanel">
                         <div class="heading">
-                            <h3 class="checkinText">Enter Phone #</h3>
+                            <h3 class="checkinText">Sign in with your phone number ...</h3>
                         </div>
-	                    <table class="phone-search">
+                        
+				                    <div class="family-search-controls">
+                                        <div class="controls">
+				                            <div id="phone-textbox" onkeypress="javascript:return FireDefaultButton(event,'btnFamilySearch')">
+				                                <asp:textbox id="txtPhone" runat="server" CssClass="phoneText" MaxLength="10" />
+				                            </div>
+				                            
+				                        </div>
+				                        
+                                    </div>
+                                    
+                                    <table class="phone-search">
 		                    <tr>
 			                    <td>
 				                    <table id="keypad">
@@ -128,20 +139,12 @@
 					                    </tr>
 				                    </table>
 			                    </td>
-			                    <td class="search">
-				                    <div class="family-search-controls">
-                                        <div class="controls">
-				                            <div id="phone-textbox" onkeypress="javascript:return FireDefaultButton(event,'btnFamilySearch')">
-				                                <asp:textbox id="txtPhone" runat="server" CssClass="phoneText" Width="334" Height="75" MaxLength="10" />
-				                            </div>
-				                            <div id="phone-search-button">
-				                                <asp:button id="btnFamilySearch" runat="server" CssClass="dataButton" Text="Search" OnClick="btnFamilySearch_Click" OnClientClick="disableButton(this);" />
-				                            </div>
-				                        </div>
-				                        <br />
-					                    <asp:Label id="lblMessage" runat="server" CssClass="checkinCaption" />
-                                    </div>
+		                    </tr>
+	                    </table>
+                        <div class="rule"></div>
+                                    
 				                    <div class="scrollArea scroll-pane" id="ScrollArea">
+					                    <asp:Label id="lblMessage" runat="server" CssClass="checkinCaption" />
 				                        <asp:datalist CssClass="centeredList" GridLines="None" id="dgFamilies" runat="server" RepeatColumns="1" CellSpacing="5" DataKeyField="FamilyID" 
 				                            OnSelectedIndexChanged="dgFamilies_SelectedIndexChanged" OnItemDataBound="dgFamilies_ItemDataBound">
 						                    <ItemTemplate>
@@ -149,14 +152,18 @@
 						                    </ItemTemplate>
 					                    </asp:datalist>
 					                </div>
-			                    </td>
-		                    </tr>
-	                    </table>
+                        
+	                    
                     </div>
                     <div class="footer">
 	                    <div class="footerLeft">
 		                        <asp:button id="btnFamilySearchCancel" CssClass="cancelButton" runat="server" Text="Cancel" OnClick="Cancel_Click" OnClientClick="disableButton(this);" />
 	                        </div>
+                         <div class="footerRight">
+                         	<div id="phone-search-button">
+				                                <asp:button id="btnFamilySearch" runat="server" CssClass="dataButton" Text="Search" OnClick="btnFamilySearch_Click" OnClientClick="disableButton(this);" />
+				                            </div>
+                         </div>
                         </div>
                 </asp:Panel>
                 <script type="text/javascript">
@@ -181,12 +188,13 @@
                             <ItemStyle HorizontalAlign="Left"></ItemStyle>
 		                    <ItemTemplate>
 		                        <div class="family-member">
-		                            <div class="family-member-button">
+		                            <div class="family-member-checkbox"><asp:ImageButton id="imgChecked" runat="server" CssClass="dataStar" ImageUrl="images/empty-checkbox.gif" /></div>
+                                    <div class="family-member-button">
 			                            <asp:Button runat="server" ID="btnPerson" Text='<%# DataBinder.Eval(Container, "DataItem.NickName") %>' 
 			                                CommandArgument='<%# DataBinder.Eval(Container, "DataItem.PersonID") %>' CausesValidation="false"  CssClass="dataButton" />
 			                            <input type="hidden" id="ihPersonID" runat="server" value='<%# DataBinder.Eval(Container, "DataItem.PersonID") %>' />
 			                        </div>
-			                        <div class="family-member-checkbox"><asp:ImageButton id="imgChecked" runat="server" CssClass="dataStar" ImageUrl="images/empty_checkbox.png" /></div>
+			                        
 			                    </div>
 		                    </ItemTemplate>
 	                    </asp:DataList>
