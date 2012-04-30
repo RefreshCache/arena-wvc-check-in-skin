@@ -872,7 +872,7 @@ namespace ArenaWeb.UserControls.Custom.Cccev.Checkin
         {
             pnlNoEligiblePeople.Visible = true;
             pnlNoEligiblePeople.Style.Add("text-align", "center");
-            lblNoEligiblePeople.CssClass = "errorText";
+            lblNoEligiblePeople.CssClass = "errorText noEligiblePeople";
             lblNoEligiblePeople.Visible = true;
             lblNoEligiblePeople.Text = NoEligibleCheckInPeopleSetting;
         }

@@ -81,7 +81,6 @@ div.heading
 
 div.footer
 {
-	background: none;
 	width: 100%;
 	height: auto;
 	min-height: 118px;
@@ -89,6 +88,7 @@ div.footer
 	bottom: 0;
 	left: 0;
 	z-index: 1;
+	
 }
 
 .invis
@@ -98,7 +98,7 @@ div.footer
 
 .footerText
 {
-	color: #FFFFFF;
+	color: #FFF;
 	font-size: 32pt;
 	display: block;
 	margin: 40px 0 0 20px;
@@ -162,6 +162,7 @@ div.footer
 {
 	height: 100%;
 	text-align: center;
+	background:url("../images/footerBg.png");
 }
 
     #divRightFooter .searchButton
@@ -200,7 +201,7 @@ h3.checkinText
 .errorText
 {
 	font-size: 36pt;
-	color: #CC0000;
+	color: #000;
 	margin: 20px;
 	padding: 20px 0px;
 	display: block;
@@ -573,9 +574,9 @@ td.fail
     right: 20px;
 }
 
-#keypad tr
+#keypad tbody
 {
-	background:url(../images/key-row.png) no-repeat;
+	background:url(../images/key-row.png) repeat-y;
 }
 
 .rule
@@ -589,4 +590,9 @@ td.fail
 .jspPane 
 {
 	text-align:center;	
+}
+
+.noEligiblePeople
+{
+	padding-top:125px;	
 }
